@@ -70,7 +70,8 @@ def all_supplies_in_holidays(holiday_hash)
    puts "{#{season.to_s.capitalize}"
  end 
  
- 
+ holiday.each do |key, value|
+      formatted_holiday = key.to_s.split('_')
 end
 
 def all_holidays_with_bbq(holiday_hash)
