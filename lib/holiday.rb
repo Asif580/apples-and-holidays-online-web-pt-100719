@@ -66,7 +66,22 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
- 
+  holiday_hash.each do |season, holiday|
+    # puts "#{season.capitalize}:"
+    puts "#{season.to_s.capitalize}:"
+    
+    holiday.each do |key, value|
+      formatted_holiday = key.to_s.split('_')
+      
+      # final_formatted_holiday = formatted_holiday.map{|word| word.capitalize}.join(' ')
+      # puts "  #{final_formatted_holiday}: #{value.join(', ')}"
+
+      # binding.pry
+      final_formatted_holiday = formatted_holiday.map(&:capitalize).join(' ')
+
+      puts "  #{final_formatted_holiday}: #{value.join(', ')}"
+      "#{key.to_s.capitalize}: #{value.join(', ')}"
+    end
 end
 
 def all_holidays_with_bbq(holiday_hash)
