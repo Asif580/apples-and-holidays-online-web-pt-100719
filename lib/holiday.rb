@@ -72,6 +72,7 @@ def all_supplies_in_holidays(holiday_hash)
  
  holiday.each do |key, value|
       formatted_holiday = key.to_s.split('_')
+      final_formatted_holiday = formatted_holiday.map(&:capitalize).join(' ')
 end
 
 def all_holidays_with_bbq(holiday_hash)
