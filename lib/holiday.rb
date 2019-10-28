@@ -82,6 +82,7 @@ def all_supplies_in_holidays(holiday_hash)
       puts "  #{final_formatted_holiday}: #{value.join(', ')}"
       "#{key.to_s.capitalize}: #{value.join(', ')}"
     end
+  end 
 end
 
 def all_holidays_with_bbq(holiday_hash)
